@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+}
+
+body {
+    margin: 20px;
+    background: #171717;
+    color: #ffffff;
+}
+
+#chat-container {
+    background: #3e3e3e; 
+    border: 1px solid #8e8e8e;
+    padding: 20px;
+    max-width: 600px;
+    height: 800px;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #ffffff; 
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+#messages {
+    flex: 1;
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#messages::-webkit-scrollbar {
+    display: none;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    line-height: 1.4;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 80%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+.message.user {
+    background: #8e8e8e;
+    margin-left: auto; 
+    text-align: right;
+    color: #ffffff; 
+}
+
+.message.assistant {
+    background: #4e4e4e;
+    margin-right: auto;
+    text-align: left;
+    color: #ffffff;
+}
+
+.message.assistant code {
+    background: #2e2e2e;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.message.assistant pre code {
+    background: #2e2e2e;
+    display: block;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+.loading {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+#user-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    background: #2e2e2e;
+    border: none;
+    color: #ffffff;
+    border-radius: 12px;
+    resize: none;
+    font-size: 14px;
+    height: 50px;
+    margin-bottom: -70px; 
+}
+
+#user-input:focus {
+    outline: none;
+}
+
+#send-btn {
+    padding: 10px 20px;
+    background: #2e2e2e;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    align-self: flex-end;
+}
+
+#send-btn:hover {
+    background: #212121;
+}
